@@ -41,6 +41,10 @@ FR_TO_EN_MAPPING = {
     "quantum dot": "Quantum Dot"
 }
 
+@app.get("/")
+def read_root():
+    return {"status": "alive", "message": "Solar Backend is running"}
+
 class LoginRequest(BaseModel):
     password: str
 
