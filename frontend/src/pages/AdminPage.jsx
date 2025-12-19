@@ -3,8 +3,7 @@ import axios from 'axios';
 import { Upload, CheckCircle, Lock, ArrowLeft } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-const API_URL = "http://127.0.0.1:8000";
-
+const API_URL = import.meta.env.VITE_API_URL || "http://127.0.0.1:8000";
 function AdminPage() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [password, setPassword] = useState('');

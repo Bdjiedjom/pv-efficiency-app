@@ -4,8 +4,7 @@ import { Search, Zap, Calendar, Activity, ChevronRight, Sun, Sparkles, TrendingU
 // IMPORT DU GRAPHIQUE
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, AreaChart, Area } from 'recharts';
 
-const API_URL = "http://127.0.0.1:8000";
-
+const API_URL = import.meta.env.VITE_API_URL || "http://127.0.0.1:8000";
 function SearchPage() {
   const [keyword, setKeyword] = useState('');
   const [result, setResult] = useState(null);
